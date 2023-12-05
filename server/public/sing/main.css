@@ -1,0 +1,95 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+}
+
+.sing {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    max-width: 625px;
+    margin: 0;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    border: 1px solid #6c6c6c;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sing input,
+.sing button {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.sing input:focus {
+    border-color: #0078d4;
+    box-shadow: 0 0 8px rgba(0, 120, 212, 0.3);
+    outline: none;
+}
+
+.sing button {
+    background-color: #0078d4;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.sing button:hover {
+    background-color: #005ea2;
+}
+
+h2 {
+    margin: 0px;
+    background: #FFF;
+    border: 1px solid #6c6c6c;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 50px;
+    padding: 5px 10px;
+}
+
+p {
+    font-size: 16px;
+    color: #333;
+    margin-top: 20px;
+    background: #FFF;
+    border: 1px solid #6c6c6c;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 50px;
+    padding: 10px 20px;
+    text-align: center;
+    /* Cor do texto */
+}
+
+a {
+    color: #0078d4;
+    /* Cor do link */
+    text-decoration: none;
+    /* Remove sublinhado padrão dos links */
+    transition: color 0.3s;
+    /* Adiciona uma transição suave de cor */
+}
+
+a:hover {
+    color: #005ea2;
+    /* Cor do link quando o mouse passa por cima */
+}

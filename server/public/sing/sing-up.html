@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+
+<body>
+    <form class="form" id="signupForm">
+        <fieldset class="sing">
+            <legend><h2>Sing Up</h2></legend>
+            <input type="text" placeholder="Nome completo" required>
+            <input type="text" id="cpf" placeholder="CPF (000.000.000-00)" required>
+            <input type="email" placeholder="E-mail" required>
+            <input type="text" id="telefone" placeholder="Telefone ((00) 00000-0000)" required>
+            <input type="password" id="password" placeholder="Senha (mín. 6 caracteres)" required>
+            <input type="password" id="confirmPassword" placeholder="Confirme a senha" required>
+            <button type="button" id="showPassword">Mostrar Senha</button>
+            <button class="btt-sing">Criar</button>
+        </fieldset>
+        <p>Eu já tenho uma conta! <a href="">Entrar.</a></p>
+    </form>
+
+    <script>
+        const passwordField = document.getElementById("password");
+        const confirmPasswordField = document.getElementById("confirmPassword");
+        const showPasswordButton = document.getElementById("showPassword");
+        const cpfField = document.getElementById("cpf");
+        const telefoneField = document.getElementById("telefone");
+        const signupForm = document.getElementById("signupForm");
+
+        showPasswordButton.addEventListener("click", function () {
+            if (passwordField.type === "password") {
+                passwordField.type = "text";
+                confirmPasswordField.type = "text";
+            } else {
+                passwordField.type = "password";
+                confirmPasswordField.type = "password";
+            }
+        });
+
+        passwordField.addEventListener("input", function () {
+            if (passwordField.value.length < 6 || /\s/.test(passwordField.value)) {
+                passwordField.setCustomValidity("A senha deve ter pelo menos 6 caracteres e não pode conter espaços.");
+            } else {
+                passwordField.setCustomValidity("");
+            }
+        });
+
+        confirmPasswordField.addEventListener("input", function () {
+            if (confirmPasswordField.value !== passwordField.value) {
+                confirmPasswordField.setCustomValidity("As senhas não correspondem.");
+            } else {
+                confirmPasswordField.setCustomValidity("");
+            }
+        });
+
+        cpfField.addEventListener("input", function (e) {
+            // Remove caracteres não numéricos
+            let value = e.target.value.replace(/\D/g, "");
+            if (value.length > 11) {
+                value = value.slice(0, 11);
+            }
+            if (value.length < 11) {
+                cpfField.setCustomValidity("O CPF deve ter 11 dígitos.");
+            } else {
+                cpfField.setCustomValidity("");
+            }
+            // Formata o valor
+            if (value.length >= 3) {
+                value = value.replace(/^(\d{3})(\d{3})(\d{3})/, "$1.$2.$3");
+                value = value.replace(/(\d{3})(\d{2})$/, "$1-$2");
+            }
+            e.target.value = value;
+        });
+
+        telefoneField.addEventListener("input", function (e) {
+            // Remove caracteres não numéricos
+            let value = e.target.value.replace(/\D/g, "");
+            if (value.length > 11) {
+                value = value.slice(0, 11);
+            }
+            if (value.length < 11) {
+                telefoneField.setCustomValidity("O telefone deve ter 11 dígitos.");
+            } else {
+                telefoneField.setCustomValidity("");
+            }
+            // Formata o valor
+            if (value.length >= 2) {
+                value = value.replace(/^(\d{2})(\d{5})(\d{4})/, "($1) $2-$3");
+            }
+            e.target.value = value;
+        });
+
+        signupForm.addEventListener("submit", function (e) {
+            if (cpfField.value.length !== 11 || telefoneField.value.length !== 11) {
+                e.preventDefault(); // Impede o envio do formulário se o CPF ou telefone não tiverem 11 dígitos
+            }
+        });
+    </script>
+</body>
+
+</html>

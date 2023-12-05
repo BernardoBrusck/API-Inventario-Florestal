@@ -1,0 +1,8 @@
+POST http://127.0.0.1:3000/generos HTTP/1.1
+content-type: application/json
+
+{
+  "id_user": "1",
+  "nome": "test 5",
+  "id_familia": "1"
+} 

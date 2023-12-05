@@ -1,0 +1,24 @@
+A API necessitará de algumas atualizações em sua implementação no servidor. Aqui estão alguns avisos importantes:
+
+Atualização da Tabela de Usuários:
+
+A tabela 'users' no banco de dados teve uma atualização na coluna "nivel VARCHAR(20) DEFAULT 'client' NOT NULL" para "cargo VARCHAR(20) DEFAULT 'client' NOT NULL". Essa alteração é crucial para os métodos de autenticação do sistema localizados em ./API - Inventário Florestal - PPO/server/middlewares.
+Para aplicar essa alteração, utilize o script SQL fornecido no arquivo ./API - Inventário Florestal - PPO/inventario_florestal DB.sql, garantindo que o banco de dados PostgreSQL seja corretamente configurado e atualizado. Isso assegurará a consistência e o funcionamento adequado do sistema.
+
+Mudança na Conexão do Banco de Dados:
+
+Em ./API - Inventário Florestal - PPO/server/src/db.js, é necessário alterar a conexão com o banco de dados. Atualmente, o banco de dados está conectado ao localhost. Certifique-se de modificar o endereço para o novo banco de dados.
+
+Implementação de Dados nas Tabelas:
+
+No banco de dados, é essencial implementar os dados nas tabelas "reino", "filo", "classe", "ordem", "família" e "gênero". Cada item dessas tabelas deve estar relacionado às suas chaves estrangeiras no banco.
+
+Conclusão da Página HTML:
+
+O uso da página .html ainda não está completo. Recomendo concluir a página para orientar futuros desenvolvedores sobre como utilizar a API. Até o momento, a página não está sendo utilizada.
+
+Estas atualizações são fundamentais para garantir o correto funcionamento da API e facilitar o desenvolvimento futuro. Certifique-se de seguir essas orientações para manter a integridade e eficácia do sistema.
+
+Inicialzar a API:
+
+Antes de iniciar a API, é essencial realizar o comando "npm install" para instalar a pasta "node_modules". Uma vez concluída a instalação, execute o comando "node .\server\src\app.js" para inicializar a API.

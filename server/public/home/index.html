@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>INVENTÁRIO FLORESTAL - API</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+</head>
+
+<body>
+    <header>
+        <div class="logo">INVENTÁRIO<b>FLORESTAL</b></div>
+        <div class="menu">
+            <button class="menu_item" id="descricao"><b>DESCRIÇÃO</b></button>
+            <button class="menu_item" id="rotas_manipulacao"><b>ROTAS DE MANIPULAÇÃO</b></button>
+            <button class="menu_item" id="ifc"><b>IFC </b></button>
+            <button class="menu_btt">
+                <div class="linhas"></div>
+                <div class="linhas"></div>
+                <div class="linhas"></div>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <div class="slide parte1">
+            <div class="left">
+                <h1>
+                    API de Dados de Espécies Florestais.
+                </h1>
+                <p>
+                    Bem-vindo ao Projeto de Inventário Florestal do IFC Camboriú! Este projeto visa a gestão e
+                    preservação das ricas florestas da nossa região por meio de um banco de dados robusto e de uma API
+                    eficiente. Desenvolvido com tecnologia de ponta, estamos comprometidos em criar uma solução que
+                    simplifique o cadastro e monitoramento das espécies florestais.
+                </p>
+            </div>
+            <div class="right">
+                <img src="../img/floresta forma.png" width="83%">
+            </div>
+        </div>
+
+        <div class="slide parte2" id="descricao-section">
+            <h1>Descrição</h1>
+            <p>
+                O Projeto de Inventário Florestal do IFC Camboriú é uma iniciativa dedicada à gestão e preservação das
+                ricas florestas da região. Nosso objetivo principal é criar um banco de dados (BD) e uma API
+                (Application Programming Interface) eficientes para o registro e monitoramento das espécies florestais
+                encontradas no IFC Camboriú.
+                <br><br>
+                As florestas desempenham um papel vital no equilíbrio ecológico, na biodiversidade e na qualidade do ar.
+                Compreender e monitorar a flora e fauna dessas florestas é fundamental para sua preservação e gestão
+                sustentável. É por isso que nosso projeto se concentra em desenvolver ferramentas tecnológicas de última
+                geração para facilitar o cadastro, acompanhamento e análise desses recursos naturais preciosos.
+                <br><br>
+                Nossa escolha de tecnologia, incluindo o uso do Node.js e PostgreSQL, reflete nosso compromisso com a
+                eficiência, escalabilidade e confiabilidade. Através da API que estamos desenvolvendo, pretendemos
+                fornecer um meio padronizado e eficaz para acesso aos dados do inventário florestal. Isso não só tornará
+                o processo de coleta de dados mais eficiente, mas também permitirá o desenvolvimento futuro de
+                aplicativos e sistemas que possam contribuir ainda mais para a preservação das florestas.
+                <br><br>
+                O Projeto de Inventário Florestal do IFC Camboriú é uma colaboração dedicada à conservação do meio
+                ambiente e à promoção da pesquisa científica. Continuaremos a aprimorar nossa solução e a expandir seu
+                potencial para uso em diversas áreas, garantindo assim a preservação desses ecossistemas vitais para as
+                gerações futuras.
+            </p>
+        </div>
+        <div class="slide parte3">
+            <div class="lados">
+                <div class="left">
+                    <h1>Sobre o Projeto</h1>
+                    <p>
+                        O inventário florestal é uma ferramenta crucial para o conhecimento e monitoramento da
+                        biodiversidade de uma área. Nosso objetivo principal é criar um banco de dados (BD) que permita
+                        o registro e gerenciamento de informações relacionadas às espécies florestais encontradas no IFC
+                        Camboriú. As informações armazenadas no BD podem ser acessadas e manipuladas por meio de uma API
+                        (Application Programming Interface) desenvolvida usando a linguagem Node.js e o Sistema
+                        Gerenciador de Banco de Dados (SGBD) PostgreSQL.
+                    </p>
+                </div>
+                <div class="right">
+                    <h1>Por que uma API?</h1>
+                    <p>
+                        A escolha de uma API se justifica pela necessidade de fornecer um meio padronizado e eficiente
+                        de acesso aos dados do inventário florestal. A API serve como uma interface de comunicação que
+                        permite a interação entre diferentes aplicações e o banco de dados. Isso abre as portas para o
+                        desenvolvimento futuro de aplicações que utilizem a API como canal de acesso aos dados,
+                        ampliando o potencial de uso e benefícios da solução.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="slide parte2 yt">
+            <div class="titulo">
+                <h1>YouTube</h1>
+                <h3>Acesse ao nosso vídeo do youtube para nos ajudar!</h3>
+            </div>
+
+            <div class="video">
+                <button class="youtube" id="qrCodeButton"></button>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/aZ4BXi2nCZQ?si=QoJ_D5BZiZsbDWm_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <script src='main.js'></script>
+            </div>
+
+
+        </div>
+    </main>
+
+    <footer></footer>
+</body>
+
+</html>
